@@ -2,7 +2,7 @@ import { Component, OnInit }        from '@angular/core';
 import { Router }                   from '@angular/router';
 import { MoviesService }            from '../movies/movies.service';
 
-declare var $: any; //jQuery
+declare var $: any;
 
 @Component({
   selector: 'app-search',
@@ -20,8 +20,7 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {
     this.language = this.moviesService.getLanguage();
-    if (this.language == 'pl') this.holder = 'czego szukasz?';
-    else this.holder = 'what are you looking for?';
+    this.holder = 'Что ты хочешь найти?';
     this.sticky();
   }
 

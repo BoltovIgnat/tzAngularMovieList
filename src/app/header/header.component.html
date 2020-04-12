@@ -1,14 +1,5 @@
 <div class="ui orange inverted borderless stackable menu">
   <a class="header item"  routerLink="/home" >
-    <i class="video icon"></i> {{ title }}
+    <i class="video icon"></i> Главная
   </a>
-
-  <div class="right menu">
-    <a class="item" *ngIf="language != 'pl'" (click)="changeLanguage('pl')">
-        <i class="pl flag"></i> PL
-    </a>
-    <a class="item" *ngIf="language == 'pl'" (click)="changeLanguage('en')">
-        <i class="gb flag"></i> EN
-    </a>
-  </div>
 </div>

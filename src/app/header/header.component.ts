@@ -7,7 +7,7 @@ import { MoviesService }            from '../movies/movies.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  title = 'Allegro MovieDB';
+  title = 'IBC tz Movie';
   language : string;
 
   constructor(
@@ -15,12 +15,7 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.language = this.moviesService.getLanguage();
+    
   }
 
-  changeLanguage(lang : string) {
-    if (lang === 'pl') this.moviesService.changeLanguage('pl');
-    else this.moviesService.changeLanguage('en');
-    location.reload();
-  }
 }
